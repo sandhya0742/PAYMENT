@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
 @Table(name = "payment")
 public class Payment {
-
+//Automatic payment id generation .
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int paymentId;
@@ -42,6 +42,7 @@ public class Payment {
 	private double securityDeposit = 5000;
 	private String guestId; // (f k) from guestId 
 	double defaultRent;
+	private double checkInAmount ;
 	
 //Getters and setters .
 	public double getDefaultRent() {
