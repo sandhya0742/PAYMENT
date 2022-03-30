@@ -27,6 +27,16 @@ public class Payment {
 	@Temporal(TemporalType.DATE)
 	private java.util.Date transactionDate = new java.util.Date(System.currentTimeMillis());
 
+	public double getCheckInAmount() {
+		
+		checkInAmount = dueAmount + securityDeposit ;
+		return checkInAmount;
+	}
+
+	public void setCheckInAmount(double checkInAmount) {
+		this.checkInAmount = checkInAmount;
+	}
+
 	LocalDate checkInDate;
 	private LocalDate checkOutDate;
 	private int remainder;
